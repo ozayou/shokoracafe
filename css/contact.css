@@ -1,0 +1,175 @@
+.container-sub {
+    width: 100%;
+    max-width: 700px;
+	  margin: 0 auto;
+}
+
+.tmenu {
+  background-image: url("../img/photo-1589114471223-dec0d8d572c6.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 464px;
+}
+
+.tmenu .container {
+  position: relative;
+}
+
+
+.tmenu__hed {
+  font-size: 7.2rem;
+  color: #fff;
+  position: absolute;
+  top: 170px;
+  right: 0;
+  font-family: "Montserrat";
+}
+
+.tmenu__subhed {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 264px;
+  right: 0;
+  font-family: "Montserrat";
+}
+
+/*--------------------------------------
+content
+--------------------------------------*/
+.content {
+  background-color: #F0F0F0;
+  padding: 100px 0 60px 0;
+}
+
+.content__outer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding:  0px 15px 80px 15px;
+}
+
+.content__top {
+  text-align: left;
+}
+
+.content__hed {
+  font-size: 1.6rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content__form {
+}
+
+/* チェックボックス01 */
+input[type=checkbox] {
+    display: none;
+}
+.checkbox01 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+    width: auto;
+}
+.checkbox01::before {
+    background: #fff;
+    border: 1px solid #231815;
+    content: '';
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+}
+.checkbox01::after {
+    border-right: 3px solid #ed7a9c;
+    border-bottom: 3px solid #ed7a9c;
+    content: '';
+    display: block;
+    height: 9px;
+    left: 10px;
+    margin-top: -7px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 5px;
+}
+input[type=checkbox]:checked + .checkbox01::after {
+    opacity: 1;
+}
+
+.content__bottom {
+  box-sizing: border-box;
+}
+
+.content__bottom p {
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.content__bottom input {
+  box-sizing: border-box;
+}
+
+.content__form {
+  width: 100%;
+  max-width: 698;
+  margin-top: 5px;
+  height: 41px;
+}
+
+textarea {
+  width: 100%;
+  height: 171px;
+  margin-top: 5px;
+}
+
+.submit__wrapper {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.submit {
+  background-color: #000;
+  border-style: none;
+  /* border-radius: 30px; */
+  padding: 19px 71px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 6px #666666;
+  color: #fff;
+}
+
+.submit:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width:768px) {
+  .tmenu {
+    padding: 0 15px;
+  }
+
+  .tmenu__hed {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  font-size: 6.2rem;
+  }
+
+  .tmenu__subhed {
+  position: absolute;
+  top: 294px;
+  right: 0;
+  }
+
+  .m-menu {
+  padding: 60px 15px;
+  }
+}

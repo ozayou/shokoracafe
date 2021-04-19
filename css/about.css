@@ -1,0 +1,64 @@
+.top-about {
+  background-image: url("../img/photo-1499889808931-317a0255c0e9.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 464px;
+}
+
+.top-about__wrapper {
+  position: relative;
+}
+
+.top-about__hed {
+  font-size: 7.2rem;
+  color: #fff;
+  position: absolute;
+  top: 156px;
+  right: 0;
+  font-family: "Montserrat";
+}
+
+.top-about__subhed {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 250px;
+  right: 0;
+  font-family: "Montserrat";
+}
+
+.message {
+  text-align: center;
+  padding: 120px 0;
+}
+
+.message__hed {
+  font-size: 3.2rem;
+}
+
+.message__txtwrapper {
+  line-height: 32px;
+}
+
+.message__txt1, .message__txt2, .message__txt3, .message__txt4, .message__txt5, .message__txt6 {
+  margin-top: 50px;
+}
+
+.message__self img {
+  width: 150px;
+  height: 150px;
+}
+
+.message__self-name {
+  margin-top: 10px;
+}
+
+.message__self-name2 {
+  margin-top: 5px;
+}
+
+@media screen and (max-width:768px) {
+  .message {
+    padding: 60px 15px;
+  }
+}

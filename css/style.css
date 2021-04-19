@@ -1,0 +1,755 @@
+html {
+    font-size: 62.5%;
+    /*デフォルトサイズ16pxの62.5%つまり10px,1em=10px*/
+    /*em≠rem*/
+    color: #444444;
+}
+
+body {
+    font-size: 15px;
+    font-family: "Noto Sans JP",serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: #444444;
+}
+
+ul {
+  	list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+	  margin: 0 auto;
+}
+
+.br-pc {
+  display: block;
+}
+
+.br-sp {
+  display: none;
+}
+
+h2 {
+  font-family: "Montserrat";
+}
+
+/*--------------------------------------
+header
+--------------------------------------*/
+.header {
+  font-family: "Montserrat";
+  width: 100%;
+  height: 96px;
+  color: #fff;
+  position: fixed;
+  z-index: 10;
+  transition: all .5s;
+}
+
+.header.change-color {
+    background-color: #282F35;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  line-height: 96px;
+}
+
+.header__left a {
+  color: #fff;
+}
+
+.header__logo {
+  font-size: 2.6rem;
+}
+
+.hamburger p {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 5.3;
+}
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 90px;
+  top   : 22px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #fff;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :#fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background :#fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+.globalMenuSp {
+    color: #000;
+    /*background-color: red;*/
+    visibility: hidden;
+}
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  right : 0;
+  color: #fff;
+  background: rgba(0,0,0); /* メニュー背景色 */
+  text-align: center;
+  width: 30%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+  line-height: 3;
+  padding-top: 100px;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #fff; /* メニュー文字色 */
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+    visibility: visible;
+    opacity: 100;
+}
+
+/*--------------------------------------
+top
+--------------------------------------*/
+.album {
+	margin: auto;
+	background-color: white;
+	position: relative;
+}
+
+.album img {
+	width: 100%;
+  height: 100%;
+  max-height: 740px;
+	animation-name: album;
+	-webkit-animation-name: album;
+	animation-duration: 10s;
+	-webkit-animation-duration: 10s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	opacity: 0;
+  object-fit: cover;
+}
+
+.album .img1 {
+	display: block;
+	margin: 0 auto;
+}
+
+.album .img2 {
+	animation-delay:5s;
+	-webkit-animation-delay:5s;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@keyframes album {
+	0% {
+		opacity: 0;
+	}
+
+	/* 12.5% {
+		opacity: 1;
+	}
+
+	37.5% {
+		opacity: 1;
+	} */
+
+	50% {
+		opacity: 1;
+	}
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes album {
+	0% {
+		opacity: 0;
+	}
+
+	/* 12.5% {
+		opacity: 1;
+	}
+
+	37.5% {
+		opacity: 1;
+	} */
+
+	50% {
+		opacity: 1;
+	}
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.top {
+  color: #fff;
+  position: relative;
+  /* background-image: url("../img/top2.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 740px; */
+}
+
+.top__outer {
+  position: absolute;
+  top: 409px;
+  right:120px;
+  font-family: "Montserrat";
+}
+
+.top__logo {
+  font-size: 7rem;
+}
+
+.top__sublogo {
+  font-size: 4rem;
+  margin-left: 40px;
+}
+
+/*--------------------------------------
+about
+--------------------------------------*/
+.about {
+  position: relative;
+}
+
+.about__bg img {
+  width: 100%;
+  height: 607px;
+  object-fit: cover;
+  position: relative;
+  top: 120px;
+  left: 0;
+  vertical-align:top;
+}
+
+.about__wrapper {
+  background-color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  top: 230px;
+  left: 230px;
+  padding: 50px 30px;
+}
+
+.about__hed {
+  font-size: 3.2rem;
+}
+
+.about__txt {
+  width: 100%;
+  max-width: 500px;
+  font-size: 1.6rem;
+  line-height: 32px;
+  margin-top: 30px;
+}
+
+.about__btnwrapper {
+  background-color: #000;
+  display: inline-block;
+  padding: 13px 41px;
+  margin-top: 30px;
+}
+
+.about__btnwrapper a {
+  color: #fff;
+  display: block;
+}
+
+.about__btnwrapper:hover {
+  opacity: 0.7;
+}
+
+/*--------------------------------------
+content
+--------------------------------------*/
+.content {
+  background-color: #F0F0F0;
+  padding: 180px 0 60px 0;
+}
+
+.content__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__hed {
+  font-size: 3.2rem;
+}
+
+.works__img, .menu__img {
+  width: 100%;
+  max-width: 520px;
+  height: 350px;
+  object-fit: cover;
+  margin-top: 30px;
+}
+
+.content__txt {
+  margin-top: 30px;
+}
+
+.content__btnwrapper {
+  background-color: #000;
+  display: inline-block;
+  padding: 13px 41px;
+  margin-top: 30px;
+}
+
+.content__btnwrapper a {
+  color: #fff;
+  display: block;
+}
+
+.content__btnwrapper:hover {
+  opacity: 0.7;
+}
+
+/*--------------------------------------
+news
+--------------------------------------*/
+.news {
+  padding: 60px 0;
+  text-align: center;
+
+}
+
+.news__hed {
+  font-size: 3.2rem;
+}
+
+.news__inner {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news__wrapper {
+  margin-top: 32px;
+  width: 500px;
+
+}
+
+.news__index {
+  margin-top: 13px;
+  font-size: 1.3rem;
+}
+
+.border {
+  border: 1px solid #DDDDDD;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/*--------------------------------------
+ACCESS
+--------------------------------------*/
+.access {
+  background-color: #F2F2F2;
+  padding: 100px 0 82px 0;
+  /* text-align: center; */
+  color: #372800;
+}
+
+.access h2 {
+  font-size: 3.2rem;
+  text-align: left;
+}
+
+.access__subtitle {
+  font-size: 3.1rem;
+  text-align: center;
+}
+
+.access__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.access__address {
+  /* text-align: left; */
+}
+
+.access__detail {
+  display: inline-block;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.access__detail table {
+  margin-top: 30px;
+  line-height: 2;
+}
+
+.brsp {
+  display: none;
+}
+
+.access__detail th, td{
+  /* text-align: left; */
+  letter-spacing: 2px;
+}
+
+th {
+  padding-right: 50px;
+}
+
+/* .access__mapwrapper { */
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  /* padding-bottom: 56.25%; */
+  padding-bottom: 30%;
+  margin-top: 38px;
+}
+
+/* .access__mapwrapper iframe { */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.access__text {
+  margin-top: 40px;
+}
+
+.access__subtext {
+  /* text-align: left; */
+  margin-top: 15px;
+}
+
+.access__subtext2 {
+  margin-top: 15px;
+}
+
+/*--------------------------------------
+contact
+--------------------------------------*/
+.contact {
+  padding: 60px 0 120px 0;
+}
+
+.contact__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__img {
+  width: 100%;
+  max-width: 580px;
+  height: 390px;
+  object-fit: cover;
+}
+
+.contact__wrapper {
+  margin-top: 60px;
+}
+
+.contact__hed {
+  font-size: 3.2rem;
+}
+
+.contact__txt {
+  width: 100%;
+  max-width: 440px;
+  margin-top: 30px;
+}
+
+/*--------------------------------------
+footer
+--------------------------------------*/
+.footer {
+  padding: 20px 0;
+  background-color: #000;
+}
+
+.footer__copy {
+  text-align: center;
+  color: #fff;
+}
+
+ @media screen and (max-width:768px) {
+   .br-sp {
+  display: block;
+}
+
+   /*--------------------------------------
+header
+--------------------------------------*/
+   .header__inner {
+    padding: 0 15px;
+  }
+
+  .hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 15px;
+  top   : 22px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  right : 0;
+  color: #fff;
+  background: rgba(0,0,0); /* メニュー背景色 */
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+  line-height: 3;
+  padding-top: 100px;
+}
+
+  /*--------------------------------------
+top
+--------------------------------------*/
+.album img {
+	width: 100%;
+  height: 800px;
+	animation-name: album;
+	-webkit-animation-name: album;
+	animation-duration: 10s;
+	-webkit-animation-duration: 10s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	opacity: 0;
+  object-fit: cover;
+  object-position: 20% 100%;
+}
+
+.top__outer {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right:initial;
+  padding: 0 15px;
+}
+
+.top__logo {
+  font-size: 5rem;
+}
+
+.top__sublogo {
+  font-size: 3rem;
+  margin-left: 0px;
+}
+
+/*--------------------------------------
+about
+--------------------------------------*/
+
+.about__wrapper {
+  background-color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  top: 200px;
+  left: 0px;
+  padding: 50px 30px;
+}
+
+
+
+/*--------------------------------------
+content
+--------------------------------------*/
+
+.content__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.menu {
+  margin-top: 60px;
+}
+
+/*--------------------------------------
+news
+--------------------------------------*/
+.news {
+  padding: 60px 0px;
+  text-align: center;
+}
+
+.news__wrapper {
+  margin-top: 32px;
+  width: 300px;
+
+}
+
+/*--------------------------------------
+ACCESS
+--------------------------------------*/
+
+.access h2 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+ .access__mapwrapper {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* padding-bottom: 30%; */
+  margin-top: 38px;
+}
+
+.access__inner {
+  padding: 0 15px;
+  margin-top: 30px;
+}
+
+.brsp {
+  display: block;
+}
+
+ .access__mapwrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.access__detail tr {
+  white-space: nowrap;
+}
+
+/*--------------------------------------
+contact
+--------------------------------------*/
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+ }
+
+ @media screen and (max-width: 480px) {
+  /*--------------------------------------
+about
+--------------------------------------*/
+
+.about__bg img {
+  width: 100%;
+  height: 607px;
+  object-fit: cover;
+  position: relative;
+  top: 0px;
+  left: 0;
+  vertical-align:top;
+}
+
+.about__wrapper {
+  background-color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  padding: 50px 30px;
+}
+
+.content {
+  background-color: #F0F0F0;
+  padding: 80px 0 80px 0;
+}
+
+
+ }
